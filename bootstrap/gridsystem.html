@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name - "viewport" content = "width=device-width, initial-scale=1">
+        <title>bootstrap 101 | gridd system</title>
+        <style>
+            .row{
+                height: 5em;
+                border: 1px solid;
+                margin-top: 10px 0;
+                background-color:rgb(191, 133, 215);
+            }
+            .container>.row>div:nth-child(2){
+                background-color:darkmagenta;
+            }
+            .container>.row>div:nth-child(1){
+                background-color: violet;
+            }
+            .container>.row>div:nth-child(3){
+                background-color: mediumorchid;
+            }
+            [class^=col-]{
+                padding: 10px 20px;
+                border: 1px solid blueviolet;
+            }
+        </style>
+        <link href = "vendor/bootstrap-4.5.3-dist/css/bootstrap-grid.css" rel = "stylesheet">
+    </head>
+    <body>
+        <p><a href = "index.html"> Back </a></p>
+        <br><br>
+        <div class = "container" style = "border: 1px solid black">
+            <div class = "row" >
+                <div class = "col-4" style = "border: 1px solid black">
+                    column 1
+                </div>
+                <div class = "col-4" style = "border: 1px solid black">
+                    column 2
+                </div>
+                <div class="col-4" style = "border: 1px solid black">
+                    column 3
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class = "container-fluid" style = "border: 1px solid black;">
+        <div class = "row justify-content-start">
+            <div class = "col-4" style = "border-right: 1px solid black">
+                container fluid column 1
+            </div>
+            <div class = "col-4" style = "height: 100px;">
+                container fluid column 2
+            </div>
+            <div class="col-4" style = "border-left: 1px solid black">
+                container fluid column 3
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class = "container-fluid" style = "border: 1px solid black;">
+            <div class = "row justify-content-center" style = "border: 1px solid black">
+                <div class = "col-4" style = "border-right: 1px solid black">
+                    container fluid column 1
+                </div>
+                <div class = "col-4" style = "height: 100px;">
+                    container fluid column 2
+                </div>
+                <div class="col-4" style = "border-left: 1px solid black">
+                    container fluid column 3
+                </div>
+            </div>
+            </div>
+            <div class = "container-fluid" style = "border: 1px solid black;">
+                <div class = "row justify-content-end">
+                    <div class = "col-4" style = "border-right: 1px solid black">
+                        container fluid column 1
+                    </div>
+                    <div class = "col-4" style = "height: 100px">
+                        container fluid column 2
+                    </div>
+                    <div class="col-4" style = "border-left: 1px solid black">
+                        container fluid column 3
+                    </div>
+                </div>
+                </div>
+                <br>
+        <script src = "vendor/bootstrap-4.5.3-dist/js/bootstrap.js" ></script>
+    </body>
+</html>

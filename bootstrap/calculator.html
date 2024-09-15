@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculators
+        </title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width , initial-scale = 1">
+        <link href = "vendor/bootstrap-4.5.3-dist/css/bootstrap-grid.css" rel = "stylesheet">
+        <link href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel = "stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <style>
+            .calc-btn{
+                width: 60px;
+                height: 60px;
+            }
+            .calc-display{
+                background-color: pink;
+                color:purple;
+                height: 100px;
+                width: 300px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "container p-5">
+            <div class = "d-flex justify-content-center">
+                <div class = "col-sm-12 col-md-4 col-lg-4">
+                    <div class = "card" style = "height : 400px;">
+                        <div class = "d-flex justify-content-center align-items-center p-3">
+                            <div class = "row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 calc-display">
+                                    <div id = "number_div " class = "inputString"></div>
+                                    <div id = "expression" class = "expressionString"></div>
+                                    <div id = "valur_div" class = "valueString"></div>
+                                </div>
+                                <input type = "hidden" id = "savedExpression">
+                        <div class = "d-flex justify-content-center align-items-center p-3">
+                    <div class = "row">
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" calc-btn-active data-event_key = "numLock"><small>Num Lock</small></button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "Delete">CE</button>
+                        
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "Delete">Del</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "/">/</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class = "d-flex justify-content-center align-items-center p-3">
+                    <div class = "row">
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "7">7</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "8">8</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "9">9</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "*">*</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class = "d-flex justify-content-center align-items-center p-3">
+                    <div class = "row">
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "4">4</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "5">5</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "6">6</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "-">-</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class = "d-flex justify-content-center align-items-center p-3">
+                    <div class = "row">
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "1">1</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "2">2</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "3">3</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "+">+</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class = "d-flex justify-content-center align-items-center p-3">
+                    <div class = "row">
+                        <div class = "col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <button type = "button" class = "btn btn-dark calc-btn" style = "width: 150px;" data-event_key = "0">0</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = ".">.</button>
+                        </div>
+                        <div class = "col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <button type = "button" class = "btn btn-dark calc-btn" data-event_key = "=">=</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src = "vendor/bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+        <script>
+            $(document).on('keypress', function(e){
+                $('button[data-event_key= "'+e.key +'"]').addClass('active')
+                if((e.keyCode >= 48 && e.keyCode<= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
+                    appendNumber(e.key)
+                }
+                console.log(e.key);
+            })
+            $(document).on('keyup', function(e){
+                $('button[data-event_key= "'+e.key +'"]').removeClass('active')
+                if((e.keyCode >= 48 && e.keyCode<= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
+                    appendNumber(e.key)
+                }
+                console.log(e.key);
+            })
+            $('.cal-btn').on('click',function(e){
+                var key 
+                key = $(this).data('event_key')
+                if(key != '+' && key != '-' && key != '*' && key != '/' && key != '.' && key != 'Delete' && key != 'numLock'  ){
+                    appendNumber(key)
+                }
+                console.log(key);
+            })
+
+            function appendNumber(number){
+                var existingNumber = $("#number_div").html();
+                var currentString = number;
+                var outputString = '' ;
+                if(existingNumber != '' && existingNumber != undefined && existingNumber != null ){
+                    if(existingNumber == 0){
+                        outputString = number
+                    } else {
+                        outputString = existingNumber+= currentString;
+                    }
+                } else{
+                    outputString = existingNumber;
+                }
+                $("number_div").html(outputString);
+            }
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,9 @@
+#back{
+    background-color: lightpink;
+    background-image: url("balllloooon.jpg");
+    background-position: 0cm;
+    background-repeat: round;
+    background-attachment: scroll;
+
+    background: lightpink, url("balllloooon.jpg");
+}
